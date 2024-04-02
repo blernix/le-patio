@@ -44,5 +44,30 @@ li {
     box-shadow: 15px 15px 30px rgb(25, 25, 25),
                 -15px -15px 30px rgb(60, 60, 60);
    
-    width: 50%;
+    width: 100%;
+   
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.logo {
+    font-size: 4em; /* Ajustez la taille selon vos besoins */
+    text-align: center;
+    width: 100%;
+    position: fixed; /* Pour le centrer sur l'écran */
+    top: 50%; /* Alignement vertical */
+    left: 50%; /* Alignement horizontal */
+    transform: translate(-50%, -50%); /* Centrer précisément le logo */
+    z-index: 1000; /* S'assurer que le logo est au-dessus des autres éléments */
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+.blurred {
+    filter: blur(5px);
 }
