@@ -159,3 +159,32 @@ footer {
     height: 100px;
 
 }
+
+
+
+
+            /* RESPONSIVE MOBILE */
+
+            @media (max-width: 768px) {
+                .navbar {
+                    flex-direction: column;
+                    padding: 10px;
+                }
+            
+                .menu ul {
+                    flex-direction: column;
+                    width: 100%;
+                }
+            
+                .menu li {
+                    text-align: center;
+                    padding: 10px 0;
+                }
+            
+                .menu a {
+                    width: 100%;
+                    display: block; /* rend les liens plus faciles à cliquer */
+                }
+            
+                /* Si vous utilisez un menu hamburger pour mobile, ajoutez ici les styles appropriés */
+            }
