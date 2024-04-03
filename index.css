@@ -1,10 +1,21 @@
+* {
+    margin: 0;
+}
 body   {
-    background-color: black;
-    color: white;
+    background-color: rgb(255, 255, 255);
+    color: rgb(6, 6, 6);
     display: flex;
     flex-direction: column;
     text-align: center;
     justify-content: center;
+}
+
+         /* HEADER */
+header {
+    background-color: gray;
+    margin-bottom: 100px;
+    max-width: 100%;
+
 }
 
 .navbar {
@@ -12,17 +23,12 @@ body   {
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    width: 50%;
+    object-fit:cover;
+    
 }
 a {
     text-decoration: none;
-    color: white;
-}
-
-
-.menu {
-    display: flex;
-    flex-direction: row;
+    color: rgb(0, 0, 0);
 }
 
 ul {
@@ -36,16 +42,60 @@ ul {
 
 li {
     margin: 20px;
+    border: solid 1px black;
+    padding: 10px;
+}
+
+
+.menu {
+    display: flex;
+    flex-direction: row;
+}
+            /* CONTENT */
+
+
+#presentation {
+    display: flex;
+    align-items: center; /* Centrer les items verticalement */
+    justify-content: space-between; /* Répartir l'espace horizontalement */
+    overflow: hidden; /* Assurez-vous que rien ne déborde du conteneur */
+}
+
+.photos-items {
+    flex: 1; /* Prendre l'espace disponible */
+    display: flex; /* Permet d'utiliser flexbox pour centrer l'image */
+    justify-content: center; /* Centrer horizontalement l'image dans le conteneur .photo-content */
+    align-items: center; /* Centrer verticalement */
 }
 
 
 .items {
-    background: #212121;
-    box-shadow: 15px 15px 30px rgb(25, 25, 25),
-                -15px -15px 30px rgb(60, 60, 60);
-   
+    background: gray;
+    
     width: 100%;
+
+    
+    margin-bottom: 100px;
+
+    min-height: 100vh; /* Hauteur complète de l'écran */
+    display: flex;
+    flex-direction: column; /* Les éléments enfants s'empilent verticalement */
+    justify-content: center; /* Centrer le contenu verticalement */
+    align-items: center; /* Centrer le contenu horizontalement */
+    text-align: center;
+
    
+}
+
+.photos-items img {
+    max-width: 100%; /* Faire en sorte que l'image ne dépasse jamais la largeur de son conteneur */
+    height: auto; /* Garder le ratio d'aspect original de l'image */
+    display: block; /* Éliminer l'espace blanc sous l'image */
+}
+
+.item-text {
+    flex: 1; /* Prendre l'espace disponible */
+    padding-right: 20px; /* Ajouter un peu d'espace entre le texte et l'image */
 }
 
 @keyframes fadeIn {
@@ -56,6 +106,37 @@ li {
         opacity: 1;
     }
 }
+
+.icones-contact {
+    width: 40px;
+    height: 40px;
+}
+
+
+       /* TELECHARGEMENT */
+
+       .telechargement {
+        width: 150px;
+        height: 60px;
+        border: 3px solid #315cfd;
+        border-radius: 45px;
+        transition: all 0.3s;
+        cursor: pointer;
+        background: white;
+        font-size: 1.2em;
+        font-weight: 550;
+        font-family: 'Montserrat', sans-serif;
+      }
+      
+      .telechargement:hover {
+        background: #315cfd;
+        color: white;
+        font-size: 1.5em;
+      }
+
+
+            /* LOGO ANIMÉ   */
+
 .logo {
     font-size: 4em; /* Ajustez la taille selon vos besoins */
     text-align: center;
@@ -65,9 +146,16 @@ li {
     left: 50%; /* Alignement horizontal */
     transform: translate(-50%, -50%); /* Centrer précisément le logo */
     z-index: 1000; /* S'assurer que le logo est au-dessus des autres éléments */
-    animation: fadeIn 2s ease-in-out forwards;
+    animation: fadeIn 0.1s ease-in-out forwards;
 }
 
 .blurred {
     filter: blur(5px);
+}
+
+
+footer {
+    position: static;
+    height: 100px;
+
 }
