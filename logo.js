@@ -27,3 +27,20 @@ $(document).ready(function() {
     });
      
   })
+
+
+  let lastScrollTop = 0; // Variable pour conserver la position précédente du défilement
+
+window.addEventListener("scroll", function() {
+   let currentScroll = window.scrollY; // Utilisation de window.scrollY à la place de pageYOffset
+   if (currentScroll > lastScrollTop){
+       // Scrollez vers le bas
+       document.querySelector(".navmobil").classList.add("hidden");
+   } else {
+       // Scrollez vers le haut
+       document.querySelector(".navmobil").classList.remove("hidden");
+   }
+   lastScrollTop = currentScroll; // Actualise la position du scroll sans la ternaire
+}, false);
+
+  

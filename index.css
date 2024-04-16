@@ -24,7 +24,7 @@
 /* HEADER */
  header {
 	 min-height: 100vh;
-	 background: linear-gradient(to bottom, rgba(0, 0, 0, .8), transparent), url('http://zigis.com.au/wp-content/uploads/2014/05/holiday2013_front.jpg') no-repeat center center;
+	 background: linear-gradient(to bottom, rgba(0, 0, 0, .8), transparent),  no-repeat center center;
 	 background-size: cover;
 	 background-attachment: fixed;
 	 display: flex;
@@ -207,7 +207,7 @@
 }
 /* TASTEFUL RECIPES SECTION */
  .bread-background {
-	 background: #000 url('http://www.performerprosites.com/development/clients/showpalace/wp-content/uploads/2014/05/tasteful-recipies-dinner-theatre.jpg') no-repeat center center;
+	 background: #000  no-repeat center center;
 	 background-size: cover;
 	 background-attachment: fixed;
 	 height: 500px;
@@ -226,7 +226,7 @@
 }
 /* THE PERFECT BLEND SECTION */
  .cake-background {
-	 background: black url('http://www.rustiquerichmond.co.uk/wp-content/uploads/2014/06/desert.jpg') no-repeat center center;
+	 background: black  no-repeat center center;
 	 background-size: cover;
 	 background-attachment: fixed;
 	 height: 500px;
@@ -252,7 +252,7 @@
  footer {
 	 margin: 0;
 	 position: relative;
-	 background: #141414;
+	 background: #7a7777;
 	 color: lightgray;
 }
  footer button {
@@ -285,6 +285,18 @@
 	 display: flex;
 	 flex-direction: column;
 	 align-items: center;
+	 justify-content: center;
+
+}
+
+footer .restaurant-info .contact img {
+	width: 24px;
+	height: auto;
+	margin: 5px;
+}
+
+.contact {
+	margin : 50px;
 }
  footer .copyright {
 	 background: #232323;
@@ -300,19 +312,111 @@
  footer .copyright span {
 	 border-bottom: solid 1px;
 }
+
+
 /* MEDIA QUERIES */
  @media screen and (max-width: 425px) {
 	 header, .bread-background, .cake-background {
 		 background-attachment: scroll;
 	}
+	.iconenav {
+		display: flex;
+		justify-content: space-around; /* This will space your icons evenly */
+		align-items: center; /* This will center align the icons vertically */
+		position: fixed;
+		bottom: 0; /* Positions your nav at the bottom of the mobile view */
+		left: 0;
+		width: 100%; /* Full width */
+		
+		background: #fff; /* Background color of the navbar */
+		box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* A subtle shadow on top */
+		z-index: 1000; /* Makes sure the navbar is above other content */
+	  }
+	  
+	  .iconenav li {
+		list-style: none; /* Removes the default list styling */
+	  }
+	  
+	  .iconenav li a {
+		display: flex;
+		flex-direction: column;
+		align-items: center; /* Centers the text under the icon */
+		font-size: 0.8rem; /* Adjust the font size as needed */
+		text-decoration: none; /* Removes underline from links */
+		color: #000; /* Sets the text color */
+		max-width: 100%;
+	  }
+	  
+	  .icon { /* This class is for the icons */
+		width: 24px; /* Set a fixed width for all icons */
+		height: auto; /* Keep the aspect ratio */
+		margin-bottom: 0.3rem; /* Space between icon and text */
+	  }
+	
+	
+	  .hidden {
+		transform: translateY(100%); /* Déplace la barre de navigation en dehors de la vue */
+		transition: transform 0.3s ease-in-out; /* Anime la transition */
+	  }
 }
  @media (min-width: 768px) {
 	 footer .restaurant-info {
 		 flex-direction: row;
 		 justify-content: space-around;
 		 align-items: flex-start;
+
 	}
+	.iconenav {
+		display: flex;
+		justify-content: space-around; /* This will space your icons evenly */
+		align-items: center; /* This will center align the icons vertically */
+		position: fixed;
+		bottom: 0; /* Positions your nav at the bottom of the mobile view */
+		left: 0;
+		width: 100%; /* Full width */
+		
+		background: #fff; /* Background color of the navbar */
+		box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* A subtle shadow on top */
+		z-index: 1000; /* Makes sure the navbar is above other content */
+	  }
+	  
+	  .iconenav li {
+		list-style: none; /* Removes the default list styling */
+	  }
+	  
+	  .iconenav li a {
+		display: flex;
+		flex-direction: column;
+		align-items: center; /* Centers the text under the icon */
+		font-size: 0.8rem; /* Adjust the font size as needed */
+		text-decoration: none; /* Removes underline from links */
+		color: #000; /* Sets the text color */
+		max-width: 100%;
+	  }
+	  
+	  .icon { /* This class is for the icons */
+		width: 24px; /* Set a fixed width for all icons */
+		height: auto; /* Keep the aspect ratio */
+		margin-bottom: 0.3rem; /* Space between icon and text */
+	  }
+	
+	
+	  .hidden {
+		transform: translateY(100%); /* Déplace la barre de navigation en dehors de la vue */
+		transition: transform 0.3s ease-in-out; /* Anime la transition */
+	  }
 }
+
+
+
+
+  
+  
+
+
+
+
+
  @media (min-width: 769px) {
 	/* NAV */
 	/* FOOTER */
@@ -475,4 +579,11 @@
 		 opacity: 1;
 	}
 }
+
+@media (min-width: 1024px) {
+	.navmobil {
+	  /* Cache la barre de navigation sur les écrans plus larges que 1024px */
+	  display: none;
+	}
+  }
  
